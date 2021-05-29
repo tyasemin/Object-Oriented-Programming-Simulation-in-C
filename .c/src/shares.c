@@ -4,17 +4,18 @@
 Shares Share() {
 	Shares this;
 	this = (Shares)malloc(sizeof(struct SHARES));
-	this->shareId = &set_id;
+	
+	this->shareId = &set_id; 
 	this->shareName = &set_name;
 	this->sharePrice = &set_price;
 	this->shareSymbol = &set_symbol;
 
-	this->GetShareId = &get_id;  //link
+	this->GetShareId = &get_id;  //Assigning functions to access from within the struct
 	this->GetShareName = &get_name;
 	this->GetSharePrice = &get_price;
 	this->GetShareSymbol = &get_symbol;
 
-	this->SetShareId = &set_id; //link
+	this->SetShareId = &set_id; 
 	this->SetShareName = &set_name;
 	this->SetSharePrice = &set_price;
 	this->SetShareSymbol = &set_symbol;
@@ -54,7 +55,7 @@ void set_price(Shares this, float *price) { //set
 	this->sharePrice = price;
 }
 
-void print_share(Shares this) {
+void print_share(Shares this) { //print
 	printf("Share name.....:%s\n", this->shareName);
 	printf("Share symbol..:%s\n", this->shareSymbol);
 	printf("Share id...:%s\n", this->shareId);
