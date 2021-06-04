@@ -14,9 +14,11 @@ private:
 	float  sharePrice;
 
 public:
+	Shares* next;
 	Shares(); //constructor
 	~Shares(); //destructor
 
+	
 
 	string GetShareId(Shares *share);
 	string GetShareName(Shares *share);
